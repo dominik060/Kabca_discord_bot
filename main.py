@@ -157,4 +157,4 @@ async def beemovie(ctx):
         await ctx.channel.send(line)
         pyautogui.press('enter')
 
-client.run('NzgxMTUzNzE1NjE2MjE5MTM2.X75gFg.Qbi-9ufw21ETHQf3fe1zK0QO7n0')
+client.run('bot token')
