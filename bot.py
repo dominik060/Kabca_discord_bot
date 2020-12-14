@@ -42,7 +42,7 @@ async def on_member_join(member):
     await member.add_roles(rank)
     print(f"{member} was given the {rank} role.")
 
-@client.event
+@bot.event
 async def on_member_join(member):
     for channel in member.guild.channels:
         if str(channel) == "oznámení": 
