@@ -38,7 +38,7 @@ async def on_command_error(ctx, error):
 role = "normální chábr"
 @bot.event
 async def on_member_join(member):
-    rank = discord.utils.get(member.guild.roles, name=role)
+    rank = discord.utils.get(member.guild.roles, name="cement dement")
     await member.add_roles(rank)
     print(f"{member} was given the {rank} role.")
 
