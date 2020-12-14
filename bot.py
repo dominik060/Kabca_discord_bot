@@ -7,7 +7,6 @@ import time
 import requests
 from discord.ext.commands import Bot
 import os
-import self
 
 bot: Bot = commands.Bot(command_prefix=',')
 bot.remove_command('help')
