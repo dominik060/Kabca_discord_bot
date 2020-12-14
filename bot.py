@@ -182,7 +182,7 @@ async def _8ball(ctx, question):
 
 @bot.command()
 async def clear(ctx, amount=2):
-    await ctx.channel.purge(limit=amount)
+    await ctx.channel.purge(limit=amount + 1)
 
 
 @bot.command()
