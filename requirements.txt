@@ -2,12 +2,7 @@ arg==0.0.1
 ctx==0.1.2
 discord==1.0.1
 discord.py==1.5.1
-heroku==0.1.4
-PyGetWindow==0.0.9
-PyGithub==1.54
-pynput==1.7.1
 Random-Word==1.0.4
 randomword==1.0.2
 RandomWords==0.3.0
 requests==2.24.0
-self==0.0.0
