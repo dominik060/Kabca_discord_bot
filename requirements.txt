@@ -6,3 +6,4 @@ Random-Word==1.0.4
 randomword==1.0.2
 RandomWords==0.3.0
 requests==2.24.0
+self==0.0.0
