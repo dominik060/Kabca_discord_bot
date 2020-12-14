@@ -1,5 +1,4 @@
 import discord
-import keep as keep
 from discord.ext import commands
 import random
 import math
@@ -7,13 +6,11 @@ from math import pi
 import time
 import requests
 from discord.ext.commands import Bot
-import keepalive_pkg
 import os
-import asyncio
 import self
+
 bot: Bot = commands.Bot(command_prefix=',')
 bot.remove_command('help')
-
 
 # Events
 
@@ -40,8 +37,6 @@ async def on_command_error(ctx, error):
 
 
 role = "normální chábr"
-
-
 @bot.event
 async def on_member_join(member):
     rank = discord.utils.get(member.guild.roles, name=role)
