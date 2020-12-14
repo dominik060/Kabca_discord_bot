@@ -264,4 +264,4 @@ přiskřip jsem si pytlík.
     await ctx.channel.send(response)
 
 
-bot.run(os.environ('TOKEN'))
+bot.run(os.environ['TOKEN'])
