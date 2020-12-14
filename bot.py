@@ -210,12 +210,6 @@ async def cat(ctx):
 async def xd(ctx):
     response = "xdddddddddd"
     await ctx.channel.send(response)
-
-@bot.command()
-async def xdd(ctx):
-    response = "@Profík12345"
-    while True:                   
-        await ctx.send(response)  
                    
                    
 @bot.command()
