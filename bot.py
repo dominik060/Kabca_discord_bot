@@ -52,10 +52,14 @@ async def on_member_join(member):
 # Commands
 @bot.command()
 async def hlasky(ctx):
-    hlasky = ["Já jsem blbá!", 
+    hlasky = [
+"Já jsem blbá!", 
 "Nandej si tu roušku!",
- "Zapomněla jsem si krabici v kabinetu!", 
-"Děcka, neserte mě!", "Tyjo to je hrozný, už píšu skoro jako Filip..."]
+"Zapomněla jsem si krabici v kabinetu!", 
+"Děcka, neserte mě!",
+"Tyjo to je hrozný, už píšu skoro jako Filip...",
+"Mám hlad!"
+]
     await ctx.send(random.choice(hlasky))
 
 
