@@ -1,3 +1,5 @@
+import sys
+import traceback
 import discord
 from discord.ext import commands
 import random
@@ -10,8 +12,17 @@ import os
 
 bot: Bot = commands.Bot(command_prefix=',')
 bot.remove_command('help')
-
+init_extensions = ['cogs.fun','cogs.wiki','cogs.economy_db','cogs.help','cogs.error_handler','cogs.images','cogs.Music','cogs.ascii_art','cogs.nasa','cogs.Reddit']
 # Events
+if __name__ == '__main__':
+    for extension in init_extensions:
+        try:
+            bot.load_extension(extension)
+            print(f'Nacteno {extension}')
+        except Exception as e:
+            print(f'Nepodarilo se nacist {extension}.', file=sys.stderr)
+            traceback.print_exc()
+
 
 @bot.event
 async def on_ready():
@@ -281,4 +292,4 @@ přiskřip jsem si pytlík.
     await ctx.channel.send(response)
     
 
-bot.run(os.environ['TOKEN'])
+bot.run(os.environ['TOKEN'], bot=True)
