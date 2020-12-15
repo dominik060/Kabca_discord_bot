@@ -239,8 +239,7 @@ async def pool(ctx, *, question):
     em = discord.Embed(color=discord.Color.blue())
     em.set_author(name=ctx.message.author.name, icon_url=ctx.message.author.avatar_url)
     em.add_field(name=f"{question}", value="✅ ano    ❎ ne")
-    await ctx.channel.send(embed=em)
-    message = await ctx.channel.send("᲼᲼᲼᲼᲼᲼")
+    message = await ctx.channel.send(embed=em)
     await message.add_reaction(emoji="✅")
     await message.add_reaction(emoji="❎")
 
