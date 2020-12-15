@@ -32,10 +32,6 @@ class Fun(commands.Cog):
 		await ctx.channel.delete_messages(mgs)
 		await ctx.channel.send(":put_litter_in_its_place: x"+str(number))
 
-	@purge.error
-	async def setuperror(self,error,ctx):
-		if isinstance(error, MissingPermissions):
-			await ctx.channel.send(ctx.message.channel, "Na tento příkaz nemáš oprávnění (správa zpráv)")
 
 	@commands.command(pass_context=True)
 	@commands.cooldown(rate=1, per=5, type=commands.BucketType.user)
@@ -113,7 +109,7 @@ class Fun(commands.Cog):
 		""" Posts a random duck """
 		await self.randomimageapi(ctx, 'https://random-d.uk/api/v1/random', 'url')
 	@commands.command(pass_context=True)
-	async def dong(self):
+	async def dong(self, ctx):
 		with open("dongs.txt",'r') as file:
 			links = json.load(file)
 			dong = random.choice(links)
@@ -183,7 +179,7 @@ class Fun(commands.Cog):
 			await ctx.channel.send(f"Dnes má svátek `{svatek_cz}` a na Slovensku `{svatek_sk}` :ribbon:")
 			
 	@svatek.command(aliases=["zítra"])
-	async def zitra(self):
+	async def zitra(self, ctx):
 		r = requests.get("https://api.abalin.net/get/tomorrow").json()
 		svatek_cz = r["data"]["name_cz"]
 		svatek_sk = r["data"]["name_sk"]
