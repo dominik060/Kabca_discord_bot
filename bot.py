@@ -82,6 +82,7 @@ async def spam(ctx, *args):
     response = ""
     for arg in args:
         response = response + " " + arg
+    print(f"{author}: ,spam {response}")
     while True:
         if a == 1:
             break
@@ -97,7 +98,7 @@ async def stop(ctx):
     global a
     a = 1
     await ctx.send("stoped")
-
+    print(f"{author}: ,stop")
 
 @bot.command()
 async def help(ctx):
@@ -202,15 +203,15 @@ async def _8ball(ctx, question):
 @bot.command()
 async def clear(ctx, amount=2):
     await ctx.channel.purge(limit=amount + 1)
-
+    print(f"{author}: ,clear {amount + 1}")
 
 @bot.command()
-async def say(ctx, *args):
+async def say(ctx, *args, author):
     response = ""
     for arg in args:
         response = response + " " + arg
     await ctx.channel.send(response)
-
+    print(f"{author}: ,say {response}")
 
 @bot.command()
 async def jnds(ctx):
@@ -272,7 +273,7 @@ máš to marný staříku nedoběhneš k hajzlíku!!!!
 
 
 @bot.command()
-async def pytlik(ctx):
+async def pytlik(ctx, author):
     response = """
 Dnes ráno na záchodě,
 strašlivě jsem vykřik.
@@ -280,6 +281,6 @@ Pod prkýnko od hajzlíku,
 přiskřip jsem si pytlík.
 """
     await ctx.channel.send(response)
-
+    
 
 bot.run(os.environ['TOKEN'])
