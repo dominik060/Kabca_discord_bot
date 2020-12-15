@@ -53,13 +53,14 @@ async def on_member_join(member):
 @bot.command()
 async def hlasky(ctx):
     hlasky = [
-"Já jsem blbá!", 
-"Nandej si tu roušku!",
-"Zapomněla jsem si krabici v kabinetu!", 
-"Děcka, neserte mě!",
-"Tyjo to je hrozný, už píšu skoro jako Filip...",
-"Mám hlad!"
-]
+    "Já jsem blbá!", 
+    "Nandej si tu roušku!",
+    "Zapomněla jsem si krabici v kabinetu!", 
+    "Děcka, neserte mě!",
+    "Tyjo to je hrozný, už píšu skoro jako Filip...",
+    "Mám hlad!"
+    "Já udělám kruh... Tak... A on mi ho tu dokreslí..."
+    ]
     await ctx.send(random.choice(hlasky))
 
 
@@ -76,7 +77,7 @@ async def invites(ctx, author):
 global a
 a = 0
 @bot.command()
-async def spam(ctx, *args):
+async def spam(ctx, *args, author):
     global a
     a = 0
     response = ""
@@ -94,7 +95,7 @@ async def spam(ctx, *args):
 
 
 @bot.command()
-async def stop(ctx):
+async def stop(ctx, author):
     global a
     a = 1
     print(f"{author}: ,stop")
