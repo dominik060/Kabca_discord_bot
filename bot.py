@@ -51,7 +51,7 @@ async def on_member_join(member):
             
 # Commands
 @bot.command()
-async def h(ctx)
+async def hlasky(ctx)
     hlasky = ["test1", "test2"]
     await ctx.send(random.choice(hlasky))
 
