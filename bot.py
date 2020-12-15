@@ -97,8 +97,9 @@ async def spam(ctx, *args):
 async def stop(ctx):
     global a
     a = 1
-    await ctx.send("stoped")
     print(f"{author}: ,stop")
+    await ctx.send("stoped")
+    
 
 @bot.command()
 async def help(ctx):
