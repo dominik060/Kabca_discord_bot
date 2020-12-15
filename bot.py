@@ -51,6 +51,12 @@ async def on_member_join(member):
             
 # Commands
 @bot.command()
+async def h(ctx)
+    hlasky = ["test1", "test2"]
+    await ctx.send(random.choice(hlasky))
+
+
+@bot.command()
 async def invites(ctx, author):
     totalInvites = 0
     for i in await ctx.guild.invites():
