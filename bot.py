@@ -120,8 +120,8 @@ async def help(ctx):
     em.add_field(name="math (příklad)", value="vypočtu ti matematický příklad", inline=False)
     em.add_field(name="pytlik", value="nech se překvapit", inline=False)
     em.add_field(name="dedavlese", value="nech se překvapit", inline=False)
-    em.add_field(name="qp (otázka)", value="quick pool(ano, ne)", inline=False)
-    em.add_field(name="pool (otázka)", value="stajný jak qp, ale lépe vypadá", inline=False)
+    em.add_field(name="qp (otázka)", value="quick poll(ano, ne)", inline=False)
+    em.add_field(name="poll (otázka)", value="stajný jak qp, ale lépe vypadá", inline=False)
     em.add_field(name="spam (co)", value="prostě budu spamit dokud mě nevypneš", inline=False)
     em.add_field(name="stop", value="zrusi spam", inline=False)
     em.add_field(name="ban (jméno, důvod)", value="prostě ban", inline=False)
@@ -250,7 +250,7 @@ async def qp(ctx, *, question):
 
 
 @bot.command()
-async def pool(ctx, *, question):
+async def poll(ctx, *, question):
     await ctx.channel.purge(limit=1)
     em = discord.Embed(color=discord.Color.blue())
     em.set_author(name=ctx.message.author.name, icon_url=ctx.message.author.avatar_url)
