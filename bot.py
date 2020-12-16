@@ -71,6 +71,8 @@ async def hlasky(ctx):
     "Tyjo to je hrozný, už píšu skoro jako Filip...",
     "Mám hlad!"
     "Já udělám kruh... Tak... A on mi ho tu dokreslí..."
+    "Tak a teď nevím co je mantis a co je základ..."
+    "Takhle se počítají buď jenom peníze nebo příklad 12."
     ]
     await ctx.send(random.choice(hlasky))
 
