@@ -63,17 +63,8 @@ async def on_member_join(member):
 # Commands
 @bot.command()
 async def hlasky(ctx):
-    hlasky = [
-    "Já jsem blbá!", 
-    "Nandej si tu roušku!",
-    "Zapomněla jsem si krabici v kabinetu!", 
-    "Děcka, neserte mě!",
-    "Tyjo to je hrozný, už píšu skoro jako Filip...",
-    "Mám hlad!"
-    "Já udělám kruh... Tak... A on mi ho tu dokreslí..."
-    "Tak a teď nevím co je mantis a co je základ..."
-    "Takhle se počítají buď jenom peníze nebo příklad 12."
-    ]
+    f = open("hlasky.txt", 'r')
+    hlasky = f.readlines()
     await ctx.send(random.choice(hlasky))
 
 
