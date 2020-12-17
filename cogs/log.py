@@ -1,19 +1,17 @@
 from datetime import datetime
-
 from discord import Embed
 from discord.ext.commands import Cog
-from discord.ext.commands import command
+from discord.ext import commands
 
 
-class Log(Cog):
+class log(commands.Cog):
 	def __init__(self, bot):
 		self.bot = bot
 
 	@Cog.listener()
 	async def on_ready(self):
-		if not self.bot.ready:
-			self.log_channel = self.bot.get_channel(759432499221889034)
-			self.bot.cogs_ready.ready_up("log")
+            self.log_channel = self.bot.get_channel(789229853576527935)
+
 
 	@Cog.listener()
 	async def on_user_update(self, before, after):
@@ -102,7 +100,7 @@ class Log(Cog):
 	@Cog.listener()
 	async def on_message_delete(self, message):
 		if not message.author.bot:
-			embed = Embed(title="Message deletion",
+			embed = Embed(title="Message delet",
 						  description=f"Action by {message.author.display_name}.",
 						  colour=message.author.colour,
 						  timestamp=datetime.utcnow())
@@ -116,4 +114,4 @@ class Log(Cog):
 
 
 def setup(bot):
-	bot.add_cog(Log(bot))
+	bot.add_cog(log(bot))
