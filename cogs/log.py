@@ -84,7 +84,7 @@ class log(commands.Cog):
 	@Cog.listener()
 	async def on_message_delete(self, message):
 		if not message.author.bot:
-			if in message is ',spam':
+			if ',spam' in message:
 				embed = Embed(title="Message delet",
 							  description=f"Action by {message.author.display_name}.",
 							  colour=message.author.colour,
