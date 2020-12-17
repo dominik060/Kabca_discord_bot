@@ -81,28 +81,34 @@ async def invites(ctx, author):
 global a
 a = 0
 @bot.command()
-async def spam(ctx, id,  *args):
+async def spam(ctx, *args):
     global id
+    global idd
     response = ""
     for arg in args:
         response = response + " " + arg
     while True:
-        if id == id:
+        if id == idd:
             break
-        elif id == 0:
+        elif id == 65111616161:
+            break
+        else:
             await ctx.send(response)
             time.sleep(1)
-        else:
-            break
+
 
 
 @bot.command()
-async def stop(ctx, id):
+async def stop(ctx, *args):
     global id
-    id = id
+    global idd
+    response = ""
+    for arg in args:
+        response = response + " " + arg
+    id = response
     await ctx.send("stoped")
     time.sleep(3)
-    id = 0
+    
 
 @bot.command()
 async def help(ctx):
