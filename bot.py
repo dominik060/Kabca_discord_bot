@@ -88,8 +88,11 @@ async def spam(ctx, *args):
     for arg in args:
         response = response + " " + arg
     while True:
-        await ctx.send(response)
-        time.sleep(1)
+        if id == idd:
+            break
+        else:
+            await ctx.send(response)
+            time.sleep(1)
 
 
 
