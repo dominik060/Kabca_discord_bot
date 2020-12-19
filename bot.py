@@ -84,6 +84,7 @@ global idd
 async def spam(ctx, *args):
     global id
     global idd
+    id = response
     response = ""
     for arg in args:
         response = response + " " + arg
