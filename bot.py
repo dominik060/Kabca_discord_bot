@@ -81,7 +81,7 @@ async def invites(ctx, author):
 global id
 global idd
 @bot.command()
-async def spam(ctx, amount = 2, *args):
+async def spam(ctx, *args):
     global id
     global idd
     id = response
@@ -89,7 +89,7 @@ async def spam(ctx, amount = 2, *args):
     response = ""
     for arg in args:
         response = response + " " + arg
-    while id == idd:
+    while id != idd:
         await ctx.send(response)
         time.sleep(0.6)
 
