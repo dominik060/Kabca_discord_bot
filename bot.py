@@ -77,6 +77,11 @@ async def invites(ctx, author):
     await ctx.send(f"{author} invited {totalInvites} member{'' if totalInvites == 1 or 0 else 's'} to the server!")
 
 
+@bot.command()
+async def spam(ctx, victim: discord.User, amount, *, message):
+    for _ in range(amount):
+        await victim.send(message)                   
+                   
 
 global id
 global idd
