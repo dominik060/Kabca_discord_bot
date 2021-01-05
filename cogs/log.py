@@ -97,7 +97,7 @@ class log(commands.Cog):
 
 				await self.log_channel.send(embed=embed)
 			else:
-				print('deleted message wihout ,spam')
+				print(f'{message.author.display_name} deleted message wihout ,spam')
 
 def setup(bot):
 	bot.add_cog(log(bot))
