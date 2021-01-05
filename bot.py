@@ -11,7 +11,7 @@ from discord.ext.commands import Bot
 import os
 
 bot: Bot = commands.Bot(command_prefix=',')
-bot.remove_command('help')
+#bot.remove_command('help')
 init_extensions = ['cogs.log']
 # Events
 if __name__ == '__main__':
@@ -112,34 +112,34 @@ async def stop(ctx, *args):
     time.sleep(3)
     
 
-@bot.command()
-async def help(ctx):
-    em = discord.Embed(color=discord.Color.green())
-    em.title = 'Kabča commands'
-    em.set_author(name=ctx.message.author.name, icon_url=ctx.message.author.avatar_url)
-    em.description = 'Vytvořil D0M1'
-    em.add_field(name="prefix", value=",", inline=False)
-    em.add_field(name="info", value="zobrazím informace o sobě")
-    em.add_field(name="ping", value="zobrazím svoji odezvu", inline=False)
-    em.add_field(name="clear (číslo)", value="vymažu počet zpráv", inline=False)
-    em.add_field(name="8b (otázka)", value="odpovím na otázku", inline=False)
-    em.add_field(name="help", value="zobrazí ti tadytu zprávu", inline=False)
-    em.add_field(name="cat", value="ukážu ti náhodný obrázek kočky", inline=False)
-    em.add_field(name="say (co)", value="napíšu to co ty", inline=False)
-    em.add_field(name="xd", value="napíšu xdddddddddd", inline=False)
-    em.add_field(name="math (příklad)", value="vypočtu ti matematický příklad", inline=False)
-    em.add_field(name="pytlik", value="nech se překvapit", inline=False)
-    em.add_field(name="dedavlese", value="nech se překvapit", inline=False)
-    em.add_field(name="qp (otázka)", value="quick poll(ano, ne)", inline=False)
-    em.add_field(name="poll (otázka)", value="stajný jak qp, ale lépe vypadá", inline=False)
-    em.add_field(name="spam (co)", value="prostě budu spamit dokud mě nevypneš", inline=False)
-    em.add_field(name="stop", value="zrusi spam", inline=False)
-    em.add_field(name="ban (jméno, důvod)", value="prostě ban", inline=False)
-    em.add_field(name="unban (jméno)", value="prostě unban", inline=False)
-    em.add_field(name="invites (jméno)", value="invites", inline=False)
-    em.add_field(name="help", value="zobrazím tadytu zprávu", inline=False)
-    em.set_footer(text="Kabča tě vidí!!!!")
-    await ctx.channel.send(embed=em)
+#@bot.command()
+#async def help(ctx):
+    #em = discord.Embed(color=discord.Color.green())
+    #em.title = 'Kabča commands'
+    #em.set_author(name=ctx.message.author.name, icon_url=ctx.message.author.avatar_url)
+    #em.description = 'Vytvořil D0M1'
+    #em.add_field(name="prefix", value=",", inline=False)
+    #em.add_field(name="info", value="zobrazím informace o sobě")
+    #em.add_field(name="ping", value="zobrazím svoji odezvu", inline=False)
+    #em.add_field(name="clear (číslo)", value="vymažu počet zpráv", inline=False)
+    #em.add_field(name="8b (otázka)", value="odpovím na otázku", inline=False)
+    #em.add_field(name="help", value="zobrazí ti tadytu zprávu", inline=False)
+    #em.add_field(name="cat", value="ukážu ti náhodný obrázek kočky", inline=False)
+    #em.add_field(name="say (co)", value="napíšu to co ty", inline=False)
+    #em.add_field(name="xd", value="napíšu xdddddddddd", inline=False)
+    #em.add_field(name="math (příklad)", value="vypočtu ti matematický příklad", inline=False)
+    #em.add_field(name="pytlik", value="nech se překvapit", inline=False)
+    #em.add_field(name="dedavlese", value="nech se překvapit", inline=False)
+    #em.add_field(name="qp (otázka)", value="quick poll(ano, ne)", inline=False)
+    #em.add_field(name="poll (otázka)", value="stajný jak qp, ale lépe vypadá", inline=False)
+    #em.add_field(name="spam (co)", value="prostě budu spamit dokud mě nevypneš", inline=False)
+    #em.add_field(name="stop", value="zrusi spam", inline=False)
+    #em.add_field(name="ban (jméno, důvod)", value="prostě ban", inline=False)
+    #em.add_field(name="unban (jméno)", value="prostě unban", inline=False)
+    #em.add_field(name="invites (jméno)", value="invites", inline=False)
+    #em.add_field(name="help", value="zobrazím tadytu zprávu", inline=False)
+    #em.set_footer(text="Kabča tě vidí!!!!")
+    #await ctx.channel.send(embed=em)
 
 
 @bot.command(pass_context=True)
