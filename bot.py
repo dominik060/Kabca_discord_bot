@@ -78,7 +78,7 @@ async def invites(ctx, author):
 
 
 @bot.command()
-async def spam(ctx, victim: discord.User, amount, *, message):
+async def L(ctx, victim: discord.User, amount, *, message):
     for _ in range(amount):
         await victim.send(message)                   
                    
