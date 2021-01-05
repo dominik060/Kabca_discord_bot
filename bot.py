@@ -78,9 +78,12 @@ async def invites(ctx, author):
 
 
 @bot.command()
-async def L(ctx, victim: discord.User, amount, *, message):
+async def lol(ctx, victim: discord.User, amount=2, *agrse):
+    response = ""
+    for arg in args:
+        response = response + " " + arg                   
     for _ in range(amount):
-        await victim.send(message)                   
+        await victim.send(response)                   
                    
 
 global id
