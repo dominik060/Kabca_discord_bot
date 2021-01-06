@@ -15,13 +15,12 @@ bot: Bot = commands.Bot(command_prefix=',')
 init_extensions = ['cogs.log', 'cogs.kraviny']
 # Events
 if __name__ == '__main__':
-    for extension in init_extension:
-        try:
-            bot.load_extension(extension)
-            print(f'Nacteno {extension}')
-        except Exception as e:
-            print(f'Nepodarilo se nacist {extension}.', file=sys.stderr)
-            traceback.print_exc()
+    try:
+        bot.load_extension(extension)
+        print(f'Nacteno {extension}')
+    except Exception as e:
+        print(f'Nepodarilo se nacist {extension}.', file=sys.stderr)
+        traceback.print_exc()
           
 @bot.event
 async def on_message(message):
