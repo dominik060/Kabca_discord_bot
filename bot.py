@@ -12,15 +12,15 @@ import os
 
 bot: Bot = commands.Bot(command_prefix=',')
 #bot.remove_command('help')
-init_extensions = ['cogs.log', 'cogs.kraviny']
-# Events
+init_extension = ['cogs.log','cogs.kraviny']
 if __name__ == '__main__':
-    try:
-        bot.load_extension(extension)
-        print(f'Nacteno {extension}')
-    except Exception as e:
-        print(f'Nepodarilo se nacist {extension}.', file=sys.stderr)
-        traceback.print_exc()
+    for extension in init_extension:
+        try:
+            bot.load_extension(extension)
+            print(f'Nacteno {extension}')
+        except Exception as e:
+            print(f'Nepodarilo se nacist {extension}.', file=sys.stderr)
+            traceback.print_exc()
           
 @bot.event
 async def on_message(message):
