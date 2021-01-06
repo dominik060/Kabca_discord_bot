@@ -15,7 +15,7 @@ bot: Bot = commands.Bot(command_prefix=',')
 init_extensions = ['cogs.log', 'cogs.kraviny']
 # Events
 if __name__ == '__main__':
-    for extension in init_extensions:
+    for extension in init_extension:
         try:
             bot.load_extension(extension)
             print(f'Nacteno {extension}')
@@ -38,9 +38,12 @@ async def on_message(message):
 
 @bot.event
 async def on_ready():
-    print('Bot is ready!')
     await bot.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name='všechen tvůj pohyb!'))
-
+    print('-' * len(str(bot.user.id)))
+    print('Bot:')
+    print(bot.user.name)
+    print(bot.user.id)
+    print('-' * len(str(bot.user.id)))
 
 @bot.event
 async def on_member_join(member):
