@@ -12,7 +12,7 @@ import os
 
 bot: Bot = commands.Bot(command_prefix=',')
 #bot.remove_command('help')
-init_extensions = ['cogs.log']
+init_extensions = ['cogs.log', 'cogs.kraviny']
 # Events
 if __name__ == '__main__':
     for extension in init_extensions:
@@ -22,7 +22,19 @@ if __name__ == '__main__':
         except Exception as e:
             print(f'Nepodarilo se nacist {extension}.', file=sys.stderr)
             traceback.print_exc()
-
+          
+@bot.event
+async def on_message(message):
+    if message.author == bot.user:
+        return
+    if message.content.startswith('cs'):
+        await message.channel.send('cs debílku!')
+    if message.content.startswith('5'):
+        await message.channel.send('jsi L')
+    if message.content.startswith('nn'):
+        await message.channel.send('ale jj')
+    if message.content.startswith('jj'):
+        await message.channel.send('ale nn')
 
 @bot.event
 async def on_ready():
