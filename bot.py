@@ -44,15 +44,6 @@ async def on_ready():
     print(bot.user.id)
     print('-' * len(str(bot.user.id)))
 
-@bot.event
-async def on_member_join(member):
-    print(f'{member} has joined a server')
-
-
-@bot.event
-async def on_member_remove(member):
-    print(f'{member} has left a server')
-
 
 @bot.event
 async def on_command_error(ctx, error):
@@ -75,12 +66,13 @@ async def on_member_join(member):
             
             
 # Commands
+"""
 @bot.command()
 async def hlasky(ctx):
     f = open("hlasky.txt", 'r')
     hlasky = f.readlines()
     await ctx.send(random.choice(hlasky))
-
+"""
 
 @bot.command()
 async def invites(ctx, author):
