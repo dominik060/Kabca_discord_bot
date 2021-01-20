@@ -12,7 +12,7 @@ import os
 
 bot: Bot = commands.Bot(command_prefix=',')
 #bot.remove_command('help')
-init_extension = ['cogs.log','cogs.kraviny']
+init_extension = ['cogs.log']
 if __name__ == '__main__':
     for extension in init_extension:
         try:
