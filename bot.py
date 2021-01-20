@@ -34,11 +34,14 @@ async def on_message(message):
         await message.channel.send('ale jj')
     if message.content.startswith('jj'):
         await message.channel.send('ale nn')
-    if message.content.startwith('https://tenor.com' or 'https://giphy.com'):
+    if message.content.startwith('https://giphy.com'):
         await message.channel.send('Už zase gif')
-    if message.content.startswith('ty mlč' or 'ty mlc'):
+    if message.content.startwith('https://tenor.com'):
+        await message.channel.send('Už zase gif')        
+    if message.content.startswith('ty mlč'):
         await message.channel.send('nn')
-        
+    if message.content.startswith('ty mlc'):
+        await message.channel.send('nn')    
 @bot.event
 async def on_ready():
     await bot.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name='všechen tvůj pohyb!'))
